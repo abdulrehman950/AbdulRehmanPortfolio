@@ -422,9 +422,9 @@ section {
   border-radius: 20px;
 }
 
-section:hover {
+/* section:hover {
   transform: translateY(-5px);
-}
+} */
 
 section::before {
   content: '';
@@ -1114,3 +1114,4 @@ section:hover::before {
     transform: translateY(-5px);
   }
 }
+
