@@ -304,3 +304,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(displayDailyHadees, 24 * 60 * 60 * 1000);
   }, timeToMidnight);
 });
+
