@@ -1,58 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Rehman's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Rehman - Portfolio</title>
+    <script>
+      // apply saved theme as early as possible to avoid flash of wrong theme
+      try {
+        const t = localStorage.getItem("theme");
+        if (t) {
+          document.documentElement.setAttribute("data-theme", t);
+          document.body && document.body.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <h2 class="name">Abdul Rehman</h2>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#About">About</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Education">Education</a></li>
+        </ul>
+        <div class="nav-right">
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
     </header>
-
-    <section id="home">
-        <h1>Welcome to <span class="animated-name">Abdul Rehman's</span> Portfolio</h1>
-        <a href="cv/AbdulRehmanCV.pdf" download class="download-btn">Download CV</a>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! My name is Abdul Rehman. I am a passionate developer with experience in web development.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
+    <!-- About Us -->
+    <section id="About">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img class="profile-img" src="/images/pic2.jpg" alt="Abdul Rehman" />
+        <div class="about-text">
+          <h3 class="name-title">I'm Abdul Rehman</h3>
+          <div class="roles-container">
+            <span id="role-text" aria-live="polite"></span
+            ><span class="role-cursor">|</span>
+          </div>
+          <p class="about-description">
+            A passionate developer who enjoys creating clean, responsive, and
+            user-friendly websites using HTML, CSS, and JavaScript. Currently,
+            I'm learning React to build modern web applications and improve my
+            development skills. My goal is to deliver professional web solutions
+            that combine creativity with functionality.
+          </p>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="Projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-content">
+            <h3>E-Commerce Website</h3>
+            <p>
+              A full-featured online shop with cart functionality and payment
+              integration.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/your-username/ecommerce"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a href="https://your-ecommerce.com" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              >
+            </div>
+          </div>
         </div>
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Task Manager</h3>
+            <p>
+              A dynamic task management application with drag-and-drop
+              functionality.
+            </p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/your-username/task-manager"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a href="https://your-taskmanager.com" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Weather Dashboard</h3>
+            <p>Real-time weather application with location-based forecasts.</p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Weather API</span>
+              <span>CSS3</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/your-username/weather-app"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a href="https://your-weather.com" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <!-- Skills Section -->
+    <section id="Skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fab fa-html5"></i>
+          <h3>HTML5</h3>
+          <div class="skill-level">
+            <div class="skill-bar" style="width: 95%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-css3-alt"></i>
+          <h3>CSS3</h3>
+          <div class="skill-level">
+            <div class="skill-bar" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-js"></i>
+          <h3>JavaScript</h3>
+          <div class="skill-level">
+            <div class="skill-bar" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-react"></i>
+          <h3>React</h3>
+          <div class="skill-level">
+            <div class="skill-bar" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-git-alt"></i>
+          <h3>Git</h3>
+          <div class="skill-level">
+            <div class="skill-bar" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Responsive Design</h3>
+          <div class="skill-level">
+            <div class="skill-bar" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="Education">
+      <h2>Education</h2>
+      <div class="education-timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Bachelor's in Computer Science</h3>
+            <h4>University Name</h4>
+            <p class="timeline-date">2020 - 2024</p>
+            <p>
+              Focused on web development, algorithms, and software engineering
+              principles.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Web Development Bootcamp</h3>
+            <h4>Tech Academy</h4>
+            <p class="timeline-date">2023</p>
+            <p>Intensive training in modern web technologies and frameworks.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>React Specialization</h3>
+            <h4>Online Course</h4>
+            <p class="timeline-date">2024</p>
+            <p>Advanced React patterns, hooks, and state management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hadees Quotes Section -->
+    <section id="Quotes">
+      <h2>Daily Hadees</h2>
+      <div class="quote-container">
+        <div class="quote-card">
+          <i class="fas fa-quote-right quote-icon"></i>
+          <p class="hadees-date" id="hadees-date"></p>
+          <p class="hadees-text" id="hadees-quote"></p>
+          <div class="hadees-details">
+            <p class="hadees-reference" id="hadees-reference"></p>
+            <p class="hadees-number" id="hadees-number"></p>
+            <p class="hadees-status" id="hadees-status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="Reviews">
+      <h2>Client Reviews</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="reviewer-info">
+            <img
+              src="https://ui-avatars.com/api/?name=John+Doe"
+              alt="John Doe"
+              class="reviewer-img"
+            />
+            <div>
+              <h4>John Doe</h4>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            "Abdul's work on our e-commerce platform was exceptional. His
+            attention to detail and responsive design skills made our website
+            stand out."
+          </p>
+        </div>
+        <div class="review-card">
+          <div class="reviewer-info">
+            <img
+              src="https://ui-avatars.com/api/?name=Sarah+Smith"
+              alt="Sarah Smith"
+              class="reviewer-img"
+            />
+            <div>
+              <h4>Sarah Smith</h4>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            "Great communication throughout the project. Delivered exactly what
+            we needed and was always ready to make adjustments when requested."
+          </p>
+        </div>
+        <div class="review-card">
+          <div class="reviewer-info">
+            <img
+              src="https://ui-avatars.com/api/?name=Mike+Johnson"
+              alt="Mike Johnson"
+              class="reviewer-img"
+            />
+            <div>
+              <h4>Mike Johnson</h4>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            "Abdul helped us modernize our website with the latest React
+            features. His technical knowledge and problem-solving skills are
+            impressive."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="Contact">
+      <h2>Contact</h2>
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/malikabdulrehman250@gmail.com"
+        method="POST"
+      >
+        <div class="form-group">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="s-btn">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
         <p id="form-status"></p>
+      </form>
     </section>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/+92440174950" class="whatsapp-chat" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Abdul Rehman</h3>
+          <p>Frontend Developer</p>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://linkedin.com/in/abdul-rehman-747a3522a"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/abdulrehman950"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://web.facebook.com/abdulrahmankhokhar4950"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/therehmanmalik/"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://wa.me/+923440174950"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Abdul Rehman. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
