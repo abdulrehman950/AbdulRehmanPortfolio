@@ -80,7 +80,7 @@ if (contactForm) {
       submitButton.disabled = true;
 
       const response = await fetch(
-        "https://formspree.io/f/malikabdulrehman250@gmail.com",
+        "https://formspree.io/f/mwpwrvvw",
         {
           method: "POST",
           body: formData,
@@ -304,4 +304,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(displayDailyHadees, 24 * 60 * 60 * 1000);
   }, timeToMidnight);
 });
+
 
