@@ -304,9 +304,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(displayDailyHadees, 24 * 60 * 60 * 1000);
   }, timeToMidnight);
 });
- <script>
-      const defaultTitle = document.title;
-      const awayTitles = [
+   const defaultTitle = document.title;
+  const awayTitles = [
         "Hey! Come back 😢",
         "We miss you 👋",
         "you are there? 👀",
@@ -332,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.addEventListener("focus", () => {
         document.title = defaultTitle;
       });
-    </script>
+
 
 
 
