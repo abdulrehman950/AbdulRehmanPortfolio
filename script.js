@@ -304,5 +304,35 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(displayDailyHadees, 24 * 60 * 60 * 1000);
   }, timeToMidnight);
 });
+ <script>
+      const defaultTitle = document.title;
+      const awayTitles = [
+        "Hey! Come back 😢",
+        "We miss you 👋",
+        "you are there? 👀",
+        "Don't leave us!",
+        "Your site is lonely 😔",
+        "Hello? Come back!",
+        "Stay a while! 😊",
+        "You left me on read... 😞",
+      ];
+
+      // function to pick random title
+      function getRandomTitle() {
+        const index = Math.floor(Math.random() * awayTitles.length);
+        return awayTitles[index];
+      }
+
+      // Tab chhodne par
+      window.addEventListener("blur", () => {
+        document.title = getRandomTitle();
+      });
+
+      // Tab wapas aane par
+      window.addEventListener("focus", () => {
+        document.title = defaultTitle;
+      });
+    </script>
+
 
 
